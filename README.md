@@ -8,3 +8,4 @@
 | 12/11/2024 | 2  | Cisco Introduction to Cybersecurity  | Module 4 |
 | 13/11/2024 | 2  | Cisco Introduction to Cybersecurity  | Module 5 |
 | 15/11/2024 | 1  | Cisco Introduction to Cybersecurity  | exam |
+| 26/11/2024 | 3  | Portswigger  | 8 labs |
