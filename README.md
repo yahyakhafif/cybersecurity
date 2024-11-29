@@ -10,3 +10,5 @@
 | 15/11/2024 | 1  | Cisco Introduction to Cybersecurity  | exam |
 | 26/11/2024 | 3  | Portswigger  | 8 labs SQL injection |
 | 28/11/2024 | 1  | Portswigger  | 2 labs Authentication |
+| 28/11/2024 | 1  | Portswigger  | 2 labs Access control |
+| 28/11/2024 | 1  | Portswigger | report |
