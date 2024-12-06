@@ -1,15 +1,15 @@
--- enable the uuid-ossp extension 
+-- Enable the uuid-ossp extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
--- enable crypto functions
+-- Enable crypto functions
 CREATE EXTENSION pgcrypto;
 
 -- Users table: Minimized personal information, pseudonymization via user_token
 CREATE TABLE yk123_users (
     user_id SERIAL PRIMARY KEY,
-    username VARCHAR(50) UNIQUE NOT NULL,
+    username VARCHAR(50) UNIQUE,
     password_hash TEXT NOT NULL,
-    role VARCHAR(15) CHECK (role IN ('reserver', 'administrator')) NOT NULL,
+    role VARCHAR(20) CHECK (role IN ('reserver', 'administrator')) NOT NULL,
     birthdate DATE NOT NULL,
     user_token UUID UNIQUE DEFAULT uuid_generate_v4()  -- Pseudonymized identifier
 );
@@ -82,11 +82,3 @@ BEGIN
     DELETE FROM yk123_admin_logs WHERE admin_id = user_id_to_erase;
 END;
 $$ LANGUAGE plpgsql;
-
--- Login logs 
-CREATE TABLE login_logs (
-    log_id SERIAL PRIMARY KEY, -- this is enough, in this system there is no need to generate UUID
-    user_token UUID NOT NULL REFERENCES yk123_users(user_token) ON DELETE CASCADE, -- UUID is always unique
-    login_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    ip_address VARCHAR(45) NOT NULL -- Supports IPv4 and IPv6
-);
