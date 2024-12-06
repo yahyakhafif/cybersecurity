@@ -7,7 +7,7 @@ CREATE EXTENSION pgcrypto;
 -- Users table: Minimized personal information, pseudonymization via user_token
 CREATE TABLE yk123_users (
     user_id SERIAL PRIMARY KEY,
-    username VARCHAR(50) UNIQUE,
+    username VARCHAR(50) UNIQUE NOT NULL,
     password_hash TEXT NOT NULL,
     role VARCHAR(20) CHECK (role IN ('reserver', 'administrator')) NOT NULL,
     birthdate DATE NOT NULL,
