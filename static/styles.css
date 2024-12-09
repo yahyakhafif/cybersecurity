@@ -111,3 +111,27 @@ th {
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 5%;
+    margin-left: 25%;
+    margin-right: 10px;
+    /* Space between checkbox and label */
+}
+
+.checkbox-container label {
+    line-height: 1.5;
+    /* Adjust line height for better alignment */
+}
