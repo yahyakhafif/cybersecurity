@@ -17,3 +17,4 @@
 | 06/12/2024 | 7  | The Booking system project | Phase 1 done |
 | 07/12/2024 | 7  | The Booking system project | Phase 2 done |
 | 08/12/2024 | 5  | The Booking system project | Phase 3 done |
+| 09/12/2024 | 3  | The Booking system project | Phase 4 done |
